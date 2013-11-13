@@ -16,6 +16,23 @@ http://xkcd.com/208/
 
 A regular expression is a pattern we can search for in text.
 
+### Searching for Character(s) in a Block of Text
+
+At the most *basic* level we need two forward slashes to show the **beginning**
+and **end** of the pattern we are searching for.
+For example the regular expression **/th/**
+will find all occurences of **th** within a block of text.
+
+```javascript
+var text = "The cat with the hat sat on the mat."
+var pattern = /th/gi;
+var match, matches = [];
+while ( (match = pattern.exec(text)) ) {
+    matches.push(match.index);
+}
+console.log(indices); // >> [ 0, 10, 13, 28 ]
+// see: http://repl.it/MYU
+```
 
 
 ### Basic Symbols
@@ -32,6 +49,7 @@ var match = text.match(pattern);
 console.log(match.index);       // >> 12
 // see: http://repl.it/MYS/1
 ```
+
 
 **^** (*caret* or "*circumflex*") Matches the **beginning** of a line. 
 For example, the regular expression ^Once will match the beginning of 
@@ -51,9 +69,10 @@ console.log(match);             // >> null
 // see: http://repl.it/MYS/3
 ```
 
+
 **$** (*dollar*) Matches the **end** of a line. 
-For example, the regular expression away$ would match the end of the string 
-"I need to get away" but not the string "Up Up and away!" 
+The pattern: **away$** would match the end of the string 
+"I need to get **away**" but not the string "Up Up and away!" 
 (because the away pattern is not at the *end* of the text/string/line) 
 
 ```javascript
@@ -70,6 +89,26 @@ console.log(match);             // >> null
 // see: http://repl.it/MYS/2
 ```
 
+
+**/*/** (*asterisk*) Matches zero or more occurences of the character 
+immediately preceding. .* means match any number of any characters.
+This is a bit of a useless example because it will always return a
+match for strings with any number of characters (greater than zero!)
+
+
+```javascript
+var text = "A horse! a horse! my kingdom for a horse!";
+var pattern = /end$/;
+var match = text.match(pattern);
+console.log(match.index);       // >> 12
+
+var text = "is this the end?";
+var pattern = /end$/;
+var match = text.match(pattern);
+console.log(match);             // >> null
+
+// see: http://repl.it/MYS/2
+```
 
 
 

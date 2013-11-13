@@ -45,8 +45,8 @@ while ( (match = pattern.exec(text)) ) {
     matches.push(match.index);
 }
 console.log(indices); // >> [ 0, 10, 13, 28 ]
-// see: http://repl.it/MYU
 ```
+Try: http://repl.it/MYU
 
 
 **.** (*period*) Matches **any single character**. 
@@ -59,8 +59,8 @@ var text = "Its raining cats and dogs";
 var pattern = /c.t$/;
 var match = text.match(pattern);
 console.log(match.index);       // >> 12
-// see: http://repl.it/MYS/1
 ```
+Try: http://repl.it/MYS/1
 
 
 **^** (*caret* or "*circumflex*") Matches the **beginning** of a line. 
@@ -77,9 +77,8 @@ var text = "I'm wide awake";
 var pattern = /^wake/;
 var match = text.match(pattern);
 console.log(match);             // >> null
-
-// see: http://repl.it/MYS/3
 ```
+Try: http://repl.it/MYS/3
 
 
 **$** (*dollar*) Matches the **end** of a line. 
@@ -97,9 +96,8 @@ var text = "is this the end?";
 var pattern = /end$/;
 var match = text.match(pattern);
 console.log(match);             // >> null
-
-// see: http://repl.it/MYS/2
 ```
+Try: http://repl.it/MYS/2
 
 
 ** * ** (*asterisk*) Matches zero or more occurences of the character 
@@ -119,9 +117,8 @@ var text = "is this the end?";
 var pattern = /end$/;
 var match = text.match(pattern);
 console.log(match);             // >> null
-
-// see: http://repl.it/MYS/2
 ```
+Try: http://repl.it/MYS/2
 
 
 **\ ** (*backslash*) The quoting/escaping character, 
@@ -144,8 +141,9 @@ while ( (match = pattern.exec(text)) ) {
     matches.push(match.index);
 }
 console.log(matches); // >> [ 15, 16, 17 ]
-// see: http://repl.it/MYY
 ```
+Try: http://repl.it/MYY
+
 
 **[ ]** (square brackets) Matches any one of the characters between 
 the brackets For example, the regular expression **r[aou]t** 
@@ -159,8 +157,9 @@ while ( (match = pattern.exec(text)) ) {
     matches.push(match.index);
 }
 console.log(matches); // >> [ 10, 30 ]
-// http://repl.it/MY2
 ```
+Try: http://repl.it/MY2
+
 
 An example of a **range** of characters we want to look for is: **[0-9]**
 [0-9] means find any digit.
@@ -170,8 +169,9 @@ var text = "The 49ers are an American football team based in San Francisco, Cali
 var pattern = /[0-9]/;
 var match = text.match(pattern);
 console.log(match.index);       // >> 4
-// http://repl.it/MY2/1
 ```
+Try: http://repl.it/MY2/1
+
 We can find ***all*** the **numbers** *recursively* in a block of text:
 
 ```javascript
@@ -182,8 +182,10 @@ while ( (match = pattern.exec(text)) ) {
     matches.push(match.index);
 }
 console.log(matches); // >> [ 0, 1, 2, 3, 39, 40, 41, 42 ]
-// http://repl.it/MY4
 ```
+Try: http://repl.it/MY4
+
+
 
 >> Moar: http://linuxreviews.org/beginner/tao_of_regular_expressions/
 

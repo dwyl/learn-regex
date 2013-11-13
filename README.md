@@ -16,7 +16,8 @@ While a *search engine* will have many sophisticated
 
 
 I am yet to find a Regular Expression tutorial for ***complete beginners***.
-So I'm writing one!
+So I'm writing one! 
+**Note**: this tutorial is *specific* to **JavaScript**.
 
 
 
@@ -123,7 +124,7 @@ console.log(match);             // >> null
 ```
 
 
-\ (*backslash*) The quoting/escaping character, 
+**\ ** (*backslash*) The quoting/escaping character, 
 use it to treat the next character as an ordinary character. 
 For example: \$ is used to match the dollar sign ($) 
 rather than the end of a line. Similarly, the expression \. is used to match 
@@ -146,10 +147,25 @@ console.log(matches); // >> [ 15, 16, 17 ]
 // see: http://repl.it/MYY
 ```
 
+**[ ]** (square brackets) Matches any one of the characters between 
+the brackets For example, the regular expression **r[aou]t** 
+matches **rat**, **rot**, and **rut**, but ***not ret***.
+
+```javascript
+var text = "The caged rat felt stuck in a rut.";
+var pattern = /r[aou]t/g;
+var match, matches = [];
+while ( (match = pattern.exec(text)) ) {
+    matches.push(match.index);
+}
+console.log(matches); // >> [ 10, 30 ]
+// http://repl.it/MY2
+```
 
 
+## Background 
 
-## Background Reading
+### Reading
 
 - Wikipedia Article: http://en.wikipedia.org/wiki/Regular_expression
 - Essential Guide: http://coding.smashingmagazine.com/2009/06/01/essential-guide-to-regular-expressions-tools-tutorials-and-resources/
@@ -160,6 +176,10 @@ console.log(matches); // >> [ 15, 16, 17 ]
 - General Cheat Sheet: http://www.addedbytes.com/cheat-sheets/download/regular-expressions-cheat-sheet-v2.png
 - GNU Grep tutorial: http://www.ibm.com/developerworks/aix/library/au-regexp/
 - TAO: http://linuxreviews.org/beginner/tao_of_regular_expressions/
+
+### Video
+
+- Good video by ***Lea Verou***: http://youtu.be/EkluES9Rvak
 
 ### Books
 

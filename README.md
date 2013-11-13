@@ -20,18 +20,38 @@ A regular expression is a pattern we can search for in text.
 
 ### Basic Symbols
 
-**.** (period) Matches any single character. For example the regular expression **c.t**
+**.** (*period*) Matches **any single character**. 
+For example the regular expression **c.t**
 would match the strings cat, cut, c t, but not cart or clot 
 (because there is more than one character between the **c** and the **t**)
 
 ```javascript
 var text = "Its raining cats and dogs";
-var match = text.match(/c.t/);
+var pattern = /c.t$/;
+var match = text.match(pattern);
 console.log(match.index);       // >> 12
 // see: http://repl.it/MYS/1
 ```
 
-**$** (dollar symbol) Matches the end of a line. 
+**^** (*caret* or "*circumflex*") Matches the **beginning** of a line. 
+For example, the regular expression ^Once will match the beginning of 
+"Once upon a time" but would not match "I only saw her cry once..."
+
+```javascript
+var text = "wake up its a beautiful morning!";
+var pattern = /^wake/;
+var match = text.match(pattern);
+console.log(match.index);       // >> 0 
+
+var text = "I'm wide awake";
+var pattern = /^wake/;
+var match = text.match(pattern);
+console.log(match);             // >> null
+
+// see: http://repl.it/MYS/3
+```
+
+**$** (*dollar*) Matches the **end** of a line. 
 For example, the regular expression away$ would match the end of the string 
 "I need to get away" but not the string "Up Up and away!" 
 (because the away pattern is not at the *end* of the text/string/line) 
@@ -49,6 +69,7 @@ console.log(match);             // >> null
 
 // see: http://repl.it/MYS/2
 ```
+
 
 
 

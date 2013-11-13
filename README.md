@@ -185,6 +185,8 @@ console.log(matches); // >> [ 0, 1, 2, 3, 39, 40, 41, 42 ]
 // http://repl.it/MY4
 ```
 
+>> Moar: http://linuxreviews.org/beginner/tao_of_regular_expressions/
+
 
 ## Background 
 
@@ -206,6 +208,8 @@ console.log(matches); // >> [ 0, 1, 2, 3, 39, 40, 41, 42 ]
 
 ### Books
 
+- Regular Expressions Cookbook: http://www.amazon.com/Regular-Expressions-Cookbook-Jan-Goyvaerts/dp/1449319432/
+- Mastering Regular Expressions: http://www.amazon.co.uk/Mastering-Regular-Expressions-Powerful-Techniques/dp/1565922573/
 - Text Processing in Python: http://www.amazon.com/exec/obidos/ASIN/0321112547/
 
 ### Bad Examples

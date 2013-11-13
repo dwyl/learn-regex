@@ -162,6 +162,29 @@ console.log(matches); // >> [ 10, 30 ]
 // http://repl.it/MY2
 ```
 
+An example of a **range** of characters we want to look for is: **[0-9]**
+[0-9] means find any digit.
+
+```javascript
+var text = "The 49ers are an American football team based in San Francisco, California";
+var pattern = /[0-9]/;
+var match = text.match(pattern);
+console.log(match.index);       // >> 4
+// http://repl.it/MY2/1
+```
+We can find ***all*** the **numbers** *recursively* in a block of text:
+
+```javascript
+var text = "2486 runners started the race but only 1865 finished!";
+var pattern = /[0-9]/g;
+var match, matches = [];
+while ( (match = pattern.exec(text)) ) {
+    matches.push(match.index);
+}
+console.log(matches); // >> [ 0, 1, 2, 3, 39, 40, 41, 42 ]
+// http://repl.it/MY4
+```
+
 
 ## Background 
 

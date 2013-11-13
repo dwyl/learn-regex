@@ -5,18 +5,31 @@ A simple REGular EXpression tutorial in JavaScript
 
 - - -
 
-I am yet to come across a Regular Expression tutorial for *complete* **beginners**.
-So going to try and write one. 
-
 ![Regular Expression XKCD](http://imgs.xkcd.com/comics/regular_expressions.png "RegEx save the day")
-http://xkcd.com/208/
+<sup>http://xkcd.com/208/</sup>
+
+If you have ever *wondered* how **search** works, 
+its all about *finding* ***patterns***.
+While a *search engine* will have many sophisticated 
+[search algorithms](http://en.wikipedia.org/wiki/Search_algorithm) at their
+*core* are searches for patterns in text.
+
+
+I am yet to find a Regular Expression tutorial for ***complete beginners***.
+So I'm writing one!
+
+
+
 
 
 ## What is a Regular Expression?
 
 A regular expression is a pattern we can search for in text.
 
-### Searching for Character(s) in a Block of Text
+
+## Searching for Character(s) in a Block of Text
+
+### Basic Symbols
 
 At the most *basic* level we need two forward slashes to show the **beginning**
 and **end** of the pattern we are searching for.
@@ -34,8 +47,6 @@ console.log(indices); // >> [ 0, 10, 13, 28 ]
 // see: http://repl.it/MYU
 ```
 
-
-### Basic Symbols
 
 **.** (*period*) Matches **any single character**. 
 For example the regular expression **c.t**
@@ -90,11 +101,12 @@ console.log(match);             // >> null
 ```
 
 
-**/*/** (*asterisk*) Matches zero or more occurences of the character 
+** * ** (*asterisk*) Matches zero or more occurences of the character 
 immediately preceding. .* means match any number of any characters.
 This is a bit of a useless example because it will always return a
 match for strings with any number of characters (greater than zero!)
 
+>> need a better example for asterisk! 
 
 ```javascript
 var text = "A horse! a horse! my kingdom for a horse!";
@@ -110,6 +122,29 @@ console.log(match);             // >> null
 // see: http://repl.it/MYS/2
 ```
 
+
+\ (*backslash*) The quoting/escaping character, 
+use it to treat the next character as an ordinary character. 
+For example: \$ is used to match the dollar sign ($) 
+rather than the end of a line. Similarly, the expression \. is used to match 
+the period character rather than any single character. 
+
+
+```javascript
+var text = "My Raspberry Pi Cost $45!";
+var pattern = /\$/;
+var match = text.match(pattern);
+console.log(match.index);       // >> 21
+
+var text = "Is this the end...?"
+var pattern = /\./g;
+var match, matches = [];
+while ( (match = pattern.exec(text)) ) {
+    matches.push(match.index);
+}
+console.log(matches); // >> [ 15, 16, 17 ]
+// see: http://repl.it/MYY
+```
 
 
 

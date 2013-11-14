@@ -6,6 +6,7 @@ A simple REGular EXpression tutorial in JavaScript
 - - -
 
 ![Regular Expression XKCD](http://imgs.xkcd.com/comics/regular_expressions.png "RegEx save the day")
+
 <sup>http://xkcd.com/208/</sup>
 
 If you have ever *wondered* how **search** works, 
@@ -100,7 +101,7 @@ console.log(match);             // >> null
 Try: http://repl.it/MYS/2
 
 
-** * ** (*asterisk*) Matches zero or more occurences of the character 
+* (*asterisk*) Matches zero or more occurences of the character 
 immediately preceding. .* means match any number of any characters.
 This is a bit of a useless example because it will always return a
 match for strings with any number of characters (greater than zero!)
@@ -186,6 +187,22 @@ console.log(matches); // >> [ 0, 1, 2, 3, 39, 40, 41, 42 ]
 Try: http://repl.it/MY4
 
 
+**|** (*verticle bar* or "*pipe*") Allows us to serach for two conditions 
+together. For example (him|her) matches the line "it belongs to him" and 
+matches the line "it belongs to her" but does not match the line "it belongs 
+to them."
+
+```javascript
+var text = "2486 runners started the race but only 1865 finished!";
+var pattern = /[0-9]/g;
+var match, matches = [];
+while ( (match = pattern.exec(text)) ) {
+    matches.push(match.index);
+}
+console.log(matches); // >> [ 0, 1, 2, 3, 39, 40, 41, 42 ]
+```
+
+
 
 >> Moar: http://linuxreviews.org/beginner/tao_of_regular_expressions/
 
@@ -206,7 +223,8 @@ Try: http://repl.it/MY4
 
 ### Video
 
-- Good video by ***Lea Verou***: http://youtu.be/EkluES9Rvak
+- Good video by ***Lea Verou***: http://youtu.be/EkluES9Rvak 
++ interactive tutorial: http://leaverou.github.io/regexplained/
 
 ### Books
 

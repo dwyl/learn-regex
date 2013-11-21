@@ -33,7 +33,7 @@ A regular expression is a pattern we can search for in text.
 
 ### Basic Symbols
 
-At the most *basic* level we need **/** *pattern* **/**g
+At the most *basic* level we need `/pattern/g`
 two forward slashes to show the **beginning** and **end** 
 of the pattern we are searching for.
 For example the regular expression **/th/**

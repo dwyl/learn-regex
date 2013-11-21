@@ -205,6 +205,14 @@ while ( (match = pattern.exec(text)) ) {
 console.log(matches); // >> [ 0, 1, 2, 3, 39, 40, 41, 42 ]
 ```
 
+### Flags Tell us *How* to Search
+
+Flags are placed at the end of the pattern (after the last forward slash)
+and tell the regular expression parser *how* we want to search.
+
+- **g** : "***global*** *search*" or "*find* ***all*** *occurences*"
+- **i** : "*case* ***insensitive***" so find *both* **CAT** *and* **cat**
+- **m** : "***multiline***" will match your pattern over **multiple lines**
 
 
 >> Moar: http://linuxreviews.org/beginner/tao_of_regular_expressions/

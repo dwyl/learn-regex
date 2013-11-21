@@ -209,6 +209,12 @@ and tell the regular expression parser *how* we want to search.
 - **i** : "*case* ***insensitive***" so find *both* **CAT** *and* **cat**
 - **m** : "***multiline***" will match your pattern over **multiple lines**
 
+### Special Characters
+
+**\d** Matches a digit character in the basic Latin alphabet. Equivalent to [0-9]
+
+
+
 
 >> Moar: http://linuxreviews.org/beginner/tao_of_regular_expressions/
 

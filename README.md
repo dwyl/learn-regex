@@ -3,21 +3,18 @@ learn-regex [Work-in-Progress]
 
 A simple REGular EXpression tutorial in JavaScript
 
-- - -
-
 ![Regular Expression XKCD](http://imgs.xkcd.com/comics/regular_expressions.png "RegEx save the day")
-
 <sup>http://xkcd.com/208/</sup>
 
 If you have ever *wondered* how **search** works, 
-its all about *finding* ***patterns***.
+its all about *finding* ***patterns***. <br />
 While a *search engine* will have many sophisticated 
 [search algorithms](http://en.wikipedia.org/wiki/Search_algorithm) at their
 *core* are searches for patterns in text.
 
 
 I am yet to find a Regular Expression tutorial for ***complete beginners***.
-So I'm writing one! 
+So I'm writing one! <br />
 **Note**: this tutorial is *specific* to **JavaScript**.
 
 
@@ -26,10 +23,13 @@ So I'm writing one!
 
 ## What is a Regular Expression?
 
-A regular expression is a pattern we can search for in text.
+A regular expression is a pattern we search for in text.
 
 
 ## Searching for Character(s) in a Block of Text
+
+There are **30** bits of knowledge you need to grasp in order to use
+regular expressions effectively. Each one will only take a minute to learn.
 
 ### Basic Symbols
 
@@ -161,15 +161,20 @@ Try: http://repl.it/MY2
 
 
 An example of a **range** of characters we want to look for is: **[0-9]**
-[0-9] means find any digit.
+this means means find any digit (its *much* easier than writing [0123456789])
 
 ```javascript
 var text = "The 49ers are an American football team based in San Francisco, California";
 var pattern = /[0-9]/;
 var match = text.match(pattern);
 console.log(match.index);       // >> 4
+
+var text = "The 49ers are an American football team based in San Francisco, California";
+var pattern = /[0123456789]/;
+var match = text.match(pattern);
+console.log(match.index);       // >> 4
 ```
-Try: http://repl.it/MY2/1
+Try: http://repl.it/MbG
 
 We can find ***all*** the **numbers** *recursively* in a block of text:
 
@@ -229,7 +234,7 @@ Latin alphabet. Equivalent to **[^0-9]**
 - Basic RegEx Tester: http://regexpal.com/ and http://www.myregextester.com/
 - JavaScript RegEx Cheat Sheet: https://www.debuggex.com/cheatsheet/regex/javascript
 - Toolbox: http://www.tripwiremagazine.com/2009/08/massive-regular-expressions-toolbox.html
-- Mozilla Dev article: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+- **Mozilla** Dev article: **https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp**
 
 - General Cheat Sheet: http://www.addedbytes.com/cheat-sheets/download/regular-expressions-cheat-sheet-v2.png
 - GNU Grep tutorial: http://www.ibm.com/developerworks/aix/library/au-regexp/

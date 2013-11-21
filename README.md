@@ -211,9 +211,10 @@ and tell the regular expression parser *how* we want to search.
 
 ### Special Characters
 
-**\d** Matches a digit character in the basic Latin alphabet. Equivalent to [0-9]
+**\d** Matches a digit character in the basic Latin alphabet. Equivalent to **[0-9]**
 
-
+**\D** Matches any character that is not a digit in the basic 
+Latin alphabet. Equivalent to **[^0-9]**
 
 
 >> Moar: http://linuxreviews.org/beginner/tao_of_regular_expressions/

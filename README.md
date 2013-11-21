@@ -36,11 +36,12 @@ A regular expression is a pattern we can search for in text.
 At the most *basic* level we need `/pattern/flags`
 two forward slashes to show the **beginning** and **end** 
 of the pattern we are searching for and after the last forward slash we have 
-(optional) "**flags**" in this case the letter **g** (which means "global")
-(see below for the other available flags)
+(optional) "**flags**" indicate *how* to search
+(see below for the other available flags).
 
-For example the regular expression **/th/**
-will find all occurences of **th** within a block of text.
+For example the regular expression **/th/g**
+will find **all** occurences of **th** within a block of text.
+(the **g** flag means "global" match - i.e. *find all*)
 
 ```javascript
 var text = "The cat with the hat sat on the mat."
@@ -106,24 +107,17 @@ Try: http://repl.it/MYS/2
 
 
 * (*asterisk*) Matches zero or more occurences of the character 
-immediately preceding. .* means match any number of any characters.
-This is a bit of a useless example because it will always return a
-match for strings with any number of characters (greater than zero!)
-
->> need a better example for asterisk! 
+immediately preceding. ma* means match any occurance of the characters
+**ma** followed by any other character so it will find **ma**tt or **ma**rmite
+but ignore **mom** because it does not contain **ma**.
 
 ```javascript
-var text = "A horse! a horse! my kingdom for a horse!";
-var pattern = /end$/;
+var text = "The matrix is all around us...";
+var pattern = /ma*/;
 var match = text.match(pattern);
-console.log(match.index);       // >> 12
-
-var text = "is this the end?";
-var pattern = /end$/;
-var match = text.match(pattern);
-console.log(match);             // >> null
+console.log(match.index); // >> 4
 ```
-Try: http://repl.it/MYS/2
+Try: http://repl.it/MbE
 
 
 **\ ** (*backslash*) The quoting/escaping character, 

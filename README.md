@@ -8,13 +8,13 @@ A simple REGular EXpression tutorial in JavaScript
 
 If you have ever *wondered* how **search** works, 
 its all about *finding* ***patterns***. <br />
-While a *search engine* will have many sophisticated 
+While a *search engine* will have sophisticated 
 [search algorithms](http://en.wikipedia.org/wiki/Search_algorithm) at their
 *core* are searches for patterns in text.
 
 
 I am yet to find a Regular Expression tutorial for ***complete beginners***.
-So I'm writing one! <br />
+So I'm *writing* one! <br />
 **Note**: this tutorial is *specific* to **JavaScript**.
 
 
@@ -24,6 +24,20 @@ So I'm writing one! <br />
 ## What is a Regular Expression?
 
 A regular expression is a pattern we search for in text.
+
+Imagine you want to check if an email address is well correct when someone
+is filling in a form.
+One way of doing this would be to try *sending* an email to the address and
+waiting for a reply or "[bounce](http://en.wikipedia.org/wiki/Bounce_message)" 
+(error)...
+(*obviously* this is a *terrible* idea! sending email is time consuming)
+A far more efficient way of checking email validity is to use a regular
+expression that will tell us in a milisecond 
+if the email matches a valid pattern.
+
+
+
+![email regex](http://i.imgur.com/7rV4c56.jpg "email regex")
 
 
 ## Searching for Character(s) in a Block of Text
@@ -239,6 +253,7 @@ Latin alphabet. Equivalent to **[^0-9]**
 - General Cheat Sheet: http://www.addedbytes.com/cheat-sheets/download/regular-expressions-cheat-sheet-v2.png
 - GNU Grep tutorial: http://www.ibm.com/developerworks/aix/library/au-regexp/
 - TAO: http://linuxreviews.org/beginner/tao_of_regular_expressions/
+- Overcomplicated but useful examples: http://www.tripwiremagazine.com/2009/08/massive-regular-expressions-toolbox.html
 
 ### Video
 

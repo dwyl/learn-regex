@@ -33,10 +33,11 @@ A regular expression is a pattern we can search for in text.
 
 ### Basic Symbols
 
-At the most *basic* level we need `/pattern/g`
+At the most *basic* level we need `/pattern/flags`
 two forward slashes to show the **beginning** and **end** 
 of the pattern we are searching for and after the last forward slash we have 
-(optional) "**flag**" in this case the letter **g** (which means "global").
+(optional) "**flags**" in this case the letter **g** (which means "global")
+(see below for the other available flags)
 
 For example the regular expression **/th/**
 will find all occurences of **th** within a block of text.
@@ -227,6 +228,7 @@ and tell the regular expression parser *how* we want to search.
 - Basic RegEx Tester: http://regexpal.com/ and http://www.myregextester.com/
 - JavaScript RegEx Cheat Sheet: https://www.debuggex.com/cheatsheet/regex/javascript
 - Toolbox: http://www.tripwiremagazine.com/2009/08/massive-regular-expressions-toolbox.html
+- Mozilla Dev article: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 
 - General Cheat Sheet: http://www.addedbytes.com/cheat-sheets/download/regular-expressions-cheat-sheet-v2.png
 - GNU Grep tutorial: http://www.ibm.com/developerworks/aix/library/au-regexp/

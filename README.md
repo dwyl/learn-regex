@@ -35,7 +35,9 @@ A regular expression is a pattern we can search for in text.
 
 At the most *basic* level we need `/pattern/g`
 two forward slashes to show the **beginning** and **end** 
-of the pattern we are searching for.
+of the pattern we are searching for and after the last forward slash we have 
+(optional) "**flag**" in this case the letter **g** (which means "global").
+
 For example the regular expression **/th/**
 will find all occurences of **th** within a block of text.
 

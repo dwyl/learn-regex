@@ -64,7 +64,7 @@ var match, matches = [];
 while ( (match = pattern.exec(text)) ) {
     matches.push(match.index);
 }
-console.log(indices); // >> [ 0, 10, 13, 28 ]
+console.log(matches); // >> [ 0, 10, 13, 28 ]
 ```
 Try: http://repl.it/MYU
 

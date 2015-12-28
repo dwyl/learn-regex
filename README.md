@@ -120,7 +120,7 @@ console.log(match);             // >> null
 Try: http://repl.it/MYS/2
 
 
-* (*asterisk*) Matches zero or more occurences of the character 
+__*__ (*asterisk*) Matches zero or more occurences of the character 
 immediately preceding. ma* means match any occurance of the characters
 **ma** followed by any other character so it will find **ma**tt or **ma**rmite
 but ignore **mom** because it does not contain **ma**.
@@ -134,7 +134,7 @@ console.log(match.index); // >> 4
 Try: http://repl.it/MbE
 
 
-**\ ** (*backslash*) The quoting/escaping character, 
+__\__ (*backslash*) The quoting/escaping character, 
 use it to treat the next character as an ordinary character. 
 For example: \$ is used to match the dollar sign ($) 
 rather than the end of a line. Similarly, the expression \. is used to match 

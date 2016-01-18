@@ -66,7 +66,7 @@ while ( (match = pattern.exec(text)) ) {
 }
 console.log(matches); // >> [ 0, 10, 13, 28 ]
 ```
-Try: http://repl.it/MYU
+Try: https://repl.it/MYU/2
 
 
 **.** (*period*) Matches **any single character**. 
@@ -80,7 +80,7 @@ var pattern = /c.t$/;
 var match = text.match(pattern);
 console.log(match.index);       // >> 12
 ```
-Try: http://repl.it/MYS/1
+Try: https://repl.it/MYS/1
 
 
 **^** (*caret* or "*circumflex*") Matches the **beginning** of a line. 
@@ -98,7 +98,7 @@ var pattern = /^wake/;
 var match = text.match(pattern);
 console.log(match);             // >> null
 ```
-Try: http://repl.it/MYS/3
+Try: https://repl.it/MYS/3
 
 
 **$** (*dollar*) Matches the **end** of a line. 
@@ -117,7 +117,7 @@ var pattern = /end$/;
 var match = text.match(pattern);
 console.log(match);             // >> null
 ```
-Try: http://repl.it/MYS/2
+Try: https://repl.it/MYS/2
 
 
 __*__ (*asterisk*) Matches zero or more occurences of the character 
@@ -131,7 +131,7 @@ var pattern = /ma*/;
 var match = text.match(pattern);
 console.log(match.index); // >> 4
 ```
-Try: http://repl.it/MbE
+Try: https://repl.it/MbE
 
 
 __\__ (*backslash*) The quoting/escaping character, 
@@ -155,7 +155,7 @@ while ( (match = pattern.exec(text)) ) {
 }
 console.log(matches); // >> [ 15, 16, 17 ]
 ```
-Try: http://repl.it/MYY
+Try: https://repl.it/MYY
 
 
 **[ ]** (square brackets) Matches any one of the characters between 
@@ -171,7 +171,7 @@ while ( (match = pattern.exec(text)) ) {
 }
 console.log(matches); // >> [ 10, 30 ]
 ```
-Try: http://repl.it/MY2
+Try: https://repl.it/MY2
 
 
 An example of a **range** of characters we want to look for is: **[0-9]**
@@ -188,7 +188,7 @@ var pattern = /[0123456789]/;
 var match = text.match(pattern);
 console.log(match.index);       // >> 4
 ```
-Try: http://repl.it/MbG
+Try: https://repl.it/MbG
 
 We can find ***all*** the **numbers** *recursively* in a block of text:
 
@@ -201,7 +201,7 @@ while ( (match = pattern.exec(text)) ) {
 }
 console.log(matches); // >> [ 0, 1, 2, 3, 39, 40, 41, 42 ]
 ```
-Try: http://repl.it/MY4
+Try: https://repl.it/MY4
 
 
 **|** (*verticle bar* or "*pipe*") Allows us to serach for two conditions 

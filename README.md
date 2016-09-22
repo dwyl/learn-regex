@@ -76,7 +76,7 @@ would match the strings cat, cut, c t, but not cart or clot
 
 ```javascript
 var text = "Its raining cats and dogs";
-var pattern = /c.t$/;
+var pattern = /c.t/;
 var match = text.match(pattern);
 console.log(match.index);       // >> 12
 ```

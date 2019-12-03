@@ -134,7 +134,7 @@ console.log(match.index); // >> 4
 Try: https://repl.it/MbE
 
 
-__\__ (*backslash*) The quoting/escaping character, 
+__\\__ (*backslash*) The quoting/escaping character, 
 use it to treat the next character as an ordinary character. 
 For example: \$ is used to match the dollar sign ($) 
 rather than the end of a line. Similarly, the expression \. is used to match 

@@ -262,6 +262,7 @@ Latin alphabet. Equivalent to **[^0-9]**
 
 ### Books
 
+- Introduction to Regular Expressions: https://launchschool.com/books/regex
 - Regular Expressions Cookbook: http://www.amazon.com/Regular-Expressions-Cookbook-Jan-Goyvaerts/dp/1449319432/
 - Mastering Regular Expressions: http://www.amazon.co.uk/Mastering-Regular-Expressions-Powerful-Techniques/dp/1565922573/
 - Text Processing in Python: http://www.amazon.com/exec/obidos/ASIN/0321112547/
